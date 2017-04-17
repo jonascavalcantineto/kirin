@@ -1,11 +1,5 @@
 # -*- coding: utf-8 -*-
 class Kirin:
-    server = ""
-    con_port = ""
-    from_addr = ""
-    to_addr = ""
-    subject = ""
-    msg = ""
 
     def __init__(self,server, con_port):
   		self.server = server
