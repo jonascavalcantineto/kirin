@@ -22,4 +22,3 @@ class Kirin:
 
     def setMessage(msg):
         self.msg = msg
-        
