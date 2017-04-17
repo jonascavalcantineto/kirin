@@ -1,2 +1,2 @@
 # kirin
-Classe python que envia email parametrizada
+Classe python que envia email
