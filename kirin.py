@@ -4,42 +4,43 @@ class Kirin(object):
     def __init__(self,server, con_port):
   		self._server = server
   		self._con_port = con_port
-        self._from = None
-        self._to = None
-        self._subject = None
-        self._msg = None
+
 
     @property
-    def getFrom():
-        return self._from
+    def from_addr(self):
+        return self.from_addr
 
-    @set.property
-    def setFrom(value):
-		self._from = value
-
-    @property
-    def getTo():
-        return self._to
-
-    @set.property
-    def setTo(value):
-		self._to = value
+    @from_addr.setter
+    def from_addr(self,value):
+		self.from_addr = value
 
     @property
-    def getSubject():
-        return self._subject
+    def to_addr(self):
+        return self.to_addr
 
-    @set.property
-    def setSubject(value):
-    	self._subject = value
+    @to_addr.setter
+    def to_addr(self,value):
+		self.to_addr = value
 
     @property
-    def getMessage():
-        return self._msg
+    def subject(self):
+        return self.subject
 
-    @set.property
-    def setMessage(value):
-        self._msg = value
+    @subject.setter
+    def Subject(self,value):
+    	self.subject = value
 
-    def send():
-        pass
+    @property
+    def message(self):
+        return self.msg
+
+    @message.setter
+    def message(self,value):
+        self.msg = value
+
+    def send_email(self):
+        print self._con_port
+        if self._con_port == 587:
+            return "587";
+        else:
+            return "25";
