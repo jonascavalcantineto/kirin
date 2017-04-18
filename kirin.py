@@ -1,18 +1,45 @@
 # -*- coding: utf-8 -*-
-class Kirin:
+class Kirin(object):
 
     def __init__(self,server, con_port):
-  		self.server = server
-  		self.con_port = con_port
+  		self._server = server
+  		self._con_port = con_port
+        self._from = None
+        self._to = None
+        self._subject = None
+        self._msg = None
 
-    def setFrom(from_addr):
-		self.from_addr = from_addr
+    @property
+    def getFrom():
+        return self._from
 
-    def setTo(to_addr):
-		self.to_addr = to_addr
+    @set.property
+    def setFrom(value):
+		self._from = value
 
-    def setSubject(subject):
-    	self.subject = subject
+    @property
+    def getTo():
+        return self._to
 
-    def setMessage(msg):
-        self.msg = msg
+    @set.property
+    def setTo(value):
+		self._to = value
+
+    @property
+    def getSubject():
+        return self._subject
+
+    @set.property
+    def setSubject(value):
+    	self._subject = value
+
+    @property
+    def getMessage():
+        return self._msg
+
+    @set.property
+    def setMessage(value):
+        self._msg = value
+
+    def send():
+        pass
