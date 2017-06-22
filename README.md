@@ -18,7 +18,6 @@ Getting Started
 2. Example 
 
         obj = Kirin(servidor_smtp, porta)
-	
         obj.from_addr = from@
 	
         obj.to_addr = rcpt@
