@@ -1,46 +1,70 @@
 # -*- coding: utf-8 -*-
+import smtplib
+
 class Kirin(object):
 
-    def __init__(self,server, con_port):
-  		self._server = server
-  		self._con_port = con_port
+
+    def __init__(self, server, con_port):
+  	     self._server = server
+  	     self._con_port = con_port
 
 
-    @property
-    def from_addr(self):
-        return self.from_addr
+    def getFromAddr(self):
+        return self._from_addr
 
-    @from_addr.setter
-    def from_addr(self,value):
-		self.from_addr = value
+    def setFromAddr(self, valor):
+        self._from_addr = valor
 
-    @property
-    def to_addr(self):
-        return self.to_addr
+    from_addr = property(
+                fget = getFromAddr,
+                fset = setFromAddr)
 
-    @to_addr.setter
-    def to_addr(self,value):
-		self.to_addr = value
+    def getToAddr(self):
+        return self._to_addr
 
-    @property
-    def subject(self):
-        return self.subject
+    def setToAddr(self, valor):
+        self._to_addr = valor
+        
+    to_addr = property(
+              fget = getToAddr,
+              fset = setToAddr)
 
-    @subject.setter
-    def Subject(self,value):
-    	self.subject = value
+    
+    def getSubject(self):
+        return self._subject
 
-    @property
-    def message(self):
-        return self.msg
+    def setSubject(self, valor):
+        self._subject = valor
+        
+    subject = property(
+              fget = getSubject,
+              fset = setSubject)
 
-    @message.setter
-    def message(self,value):
-        self.msg = value
+    def getMensage(self):
+        return self._mensage
+
+    def setMensage(self, valor):
+        self._mensage = valor
+        
+    mensage = property(
+              fget = getMensage,
+              fset = setMensage)
 
     def send_email(self):
-        print self._con_port
-        if self._con_port == 587:
-            return "587";
-        else:
-            return "25";
+
+        if self._con_port == "":
+            self._con_port = 25
+
+        try:
+            server = smtplib.SMTP(self._server, self._con_port)
+
+            msg = 'Subject: {}\n\n{}'.format(self.subject, self.mensage)
+
+            server.sendmail(self.from_addr, self.to_addr, msg)
+            server.quit()
+            print("Successfully sent email")
+
+        except smtplib.SMTPException as e:
+            raise e
+            print(e + " sent email")
+        
