@@ -12,6 +12,7 @@ Getting Started
 ===============
 
 1. Import
+
 	from kirin import Kirin
 	
 2. Example 
