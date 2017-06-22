@@ -19,12 +19,7 @@ Getting Started
 
         obj = Kirin(servidor_smtp, porta)
         obj.from_addr = from@
-	
         obj.to_addr = rcpt@
-	
-	obj.subject = subject
-	
-	obj.mensage = mensage
-	
-	obj.send_email()
-	
+        obj.subject = subject
+        obj.mensage = mensage
+        obj.send_email()
