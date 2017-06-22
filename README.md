@@ -1,5 +1,5 @@
 # kirin
-Classe python para envio de email 
+Python class for sendmail
 
 Welcome Python
 ==============
