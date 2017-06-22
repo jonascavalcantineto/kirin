@@ -11,14 +11,14 @@ Python interpreters are available for many operating systems, allowing Python co
 Getting Started
 ===============
 
-1. Importar lib
+1. Import
 	from kirin import Kirin
-
+	
 2. Example 
 
-        obj = Kirin(servidor_smtp, porta)
-        obj.from_addr = from@
-        obj.to_addr = rcpt@
+        obj = Kirin('server-smtp', port-number)
+        obj.from_addr = from-address
+        obj.to_addr = rcpt-address
         obj.subject = subject
         obj.mensage = mensage
         obj.send_email()
