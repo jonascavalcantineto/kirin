@@ -12,11 +12,9 @@ Getting Started
 ===============
 
 1. Import
-
 		from kirin import Kirin
 	
 2. Example 
-
 		obj = Kirin('server-smtp', port-number)
 		obj.from_addr = from-address
 		obj.to_addr = rcpt-address
