@@ -13,13 +13,13 @@ Getting Started
 
 1. Import
 
-	from kirin import Kirin
+		from kirin import Kirin
 	
 2. Example 
 
-        obj = Kirin('server-smtp', port-number)
-        obj.from_addr = from-address
-        obj.to_addr = rcpt-address
-        obj.subject = subject
-        obj.mensage = mensage
-        obj.send_email()
+		obj = Kirin('server-smtp', port-number)
+		obj.from_addr = from-address
+		obj.to_addr = rcpt-address
+		obj.subject = subject
+		obj.mensage = mensage
+		obj.send_email()
