@@ -5,13 +5,13 @@ Utilização
 =====================
 
 
-- Quando o servidor de email esta disponível na porta 25
+- Quando o servidor de email estiver disponível na porta 25
 
-1. Importar a lib para projeto
+1. Importar lib para projeto
 
 - from kirin import Kirin
 
-2. Estanciar a classe como o exemplo abaixo
+2. Estanciar classe, segue exemplo 
 
 obj = Kirin(servidor_smtp, porta)
 
